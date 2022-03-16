@@ -13,6 +13,7 @@ target_compile_definitions(rtklib PRIVATE _DARWIN_C_SOURCE)
 endif()
 
 target_include_directories(rtklib PUBLIC "src")
+target_link_libraries(rtklib PRIVATE m pthread)
 
 # rtkrvc
 add_executable(rtkrcv
